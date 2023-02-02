@@ -11,9 +11,11 @@ tools = [
     {"name": "team", "profit" : 250, "cost": 500},
     ]
 
+# Game Option Functions
+
 def cutGrass():
     tool = tools[game["tool"]]
-    print(f'you cut the grass with your {tool["name"]} and make {tool["profit"]}')
+    print(f'You cut the grass with your {tool["name"]} and make ${tool["profit"]}')
     game["money"] += tool["profit"]
     
 def checkStats():
@@ -21,18 +23,18 @@ def checkStats():
     print(f'You have ${game["money"]} in your account and are using a {tool["name"]}')
     
 def upgrade():
-    nextTool= tools[game["tool"] + 1]
+    nextTool = tools[game["tool"] + 1]
     if (nextTool == None):
         print("There are no more tools available")
         return 0
     if (game["money"] < nextTool["cost"]):
-        print("not enough money to buy tool!")
+        print("Not enough money to buy tool!")
         return 0
     game["money"] -= nextTool["cost"]
     game["tool"]  += 1
     
 def winCheck():
-    if(game["tool"] == 1 and game["money" == 1000]):
+    if(game["tool"] == 4 and game["money" == 1000]):
         print("You Win!")
         return True
     return False
