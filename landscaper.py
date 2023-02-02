@@ -39,20 +39,23 @@ def winCheck():
         return True
     return False
     
+while(True):
+    i = input(" [1] Cut Grass [2] Check Stats [3] Upgrade [4] Quit") 
+    i = int(i)
     
-    
-uinput = input("Welcome to Landscaper! Enter 'Start' to begin, enter 'Q' to Quit")
+    if (i == 1):
+        cutGrass()
+    if (i == 2):
+        checkStats()
+    if (i == 3):
+        upgrade()
+    if (i == 4):
+        print("You quit the game")
+        break
+    if (winCheck()):
+        break
 
 
-if (uinput == 'Start'):
-    if (game["money"] < 5):
-        print(f'You have ${game["money"]} in your account')
-        workinput = input(f"You have")
-    if (game["money"] < 25):
-       print(f'You have ${game["money"]} in your account')
-    if (game["money"] < 250):
-        print(f'You have ${game["money"]} in your account')
-    if (game["money"] < 500):
-        print(f'You have ${game["money"]} in your account')
-pass
+    
+
     
