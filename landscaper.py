@@ -24,10 +24,11 @@ def checkStats():
     print(f'You have ${game["money"]} in your account and are using the {tool["name"]}')
     
 def upgrade():
-    nextTool = tools[game["tool"] + 1]
-    if (nextTool == None):
-        print("There are no more tools available")
+    
+    if (game['tool'] == 4):
+        print("There are no more tools available!")
         return 0
+    nextTool = tools[game["tool"] + 1]
     if (game["money"] < nextTool["cost"]):
         print(f"Not enough money to buy the {nextTool['name']} !")
         return 0
@@ -36,10 +37,8 @@ def upgrade():
     print(f"You bought the {nextTool['name']} for ${nextTool['cost']}! You now have ${game['money']}!") 
     if(game['tool'] == 4):
         print("There are no more tools to buy!")
-    #if (nextTool != None):
-     #   print(f"Your next tool is the {tools[game['tool'] + 1]['name']} and costs ${tools[game['tool'] + 1]['cost']}!")
-    #else:
-      #  return True
+    else:
+        print(f"Your next tool is the {tools[game['tool'] + 1]['name']} and costs ${tools[game['tool'] + 1]['cost']}!")
     
 def winCheck():
     if(game["tool"] == 4 and game["money"] >= 1000):
