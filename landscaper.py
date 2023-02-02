@@ -12,5 +12,14 @@ tools = [
     ]
 uinput = input("Welcome to Landscaper! Enter 'Start' to begin, enter 'Q' to Quit")
 
-
+if (uinput == 'Start'):
+    if (money < 5):
+        print(f'You have ${money} in your account')
+    if (money < 25):
+       print(f'You have ${money} in your account')
+    if (money < 250):
+        print(f'You have ${money} in your account')
+    if (money < 500):
+        print(f'You have ${money} in your account')
+pass
     
