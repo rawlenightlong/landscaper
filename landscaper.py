@@ -46,7 +46,7 @@ def winCheck():
         return True
     return False
 
-print("Welcome to Landscaper! Pick an option:")    
+print(f"Welcome to Landscaper! You're starting with ${game['money']} and a {tools[game['tool']]['name']}. Your first upgrade is the {tools[1]['name']} and costs ${tools[1]['cost']}. Your goal is to make $1000! Pick a number and press Enter to get to work!")    
 while(True):
     
     i = input(" [1] Cut Grass [2] Check Stats [3] Upgrade [4] Quit") 
